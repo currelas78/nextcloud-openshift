@@ -185,6 +185,8 @@ objects:
           - name: MYSQL_DATABASE
             value: nextcloud
           - name: NEXTCLOUD_ADMIN_USER
+            value: root
+          - name: NEXTCLOUD_ADMIN_PASSWORD
             value: temporal
           image: nextcloud
           imagePullPolicy: Always
