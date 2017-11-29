@@ -184,6 +184,8 @@ objects:
                 name: mariadb
           - name: MYSQL_DATABASE
             value: nextcloud
+          - name: NEXTCLOUD_ADMIN_USER
+            value: temporal
           image: nextcloud
           imagePullPolicy: Always
           livenessProbe:
