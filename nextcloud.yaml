@@ -26,10 +26,10 @@ parameters:
   description: PVC size for apps
   value: 5Gi
 - name: PVC_SIZE_CONFIG
-  description: PVC size for apps
+  description: PVC size for config files
   value: 1Gi
 - name: PVC_SIZE_DATA
-  description: PVC size for apps
+  description: PVC size for data
   value: 5Gi
 objects:
 - apiVersion: v1
