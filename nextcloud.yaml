@@ -170,6 +170,20 @@ objects:
                 name: mariadb
           - name: NC_dbname
             value: nextcloud
+          - name: MYSQL_HOST
+            value: mariadb
+          - name: MYSQL_USER
+            valueFrom:
+              secretKeyRef:
+                key: database-user
+                name: mariadb
+          - name: MYSQL_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                key: database-password
+                name: mariadb
+          - name: MYSQL_DATABASE
+            value: nextcloud
           image: nextcloud
           imagePullPolicy: Always
           livenessProbe:
@@ -297,6 +311,7 @@ objects:
     port:
       targetPort: 8080-tcp
     tls:
+      insecureEdgeTerminationPolicy: Redirect
       termination: edge
     to:
       kind: Service
